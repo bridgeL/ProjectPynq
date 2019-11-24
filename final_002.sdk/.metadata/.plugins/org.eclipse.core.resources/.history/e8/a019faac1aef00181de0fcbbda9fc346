@@ -1,0 +1,245 @@
+/*
+ * File: main.c
+ *
+ * MATLAB Coder version            : 3.3
+ * C/C++ source code generated on  : 17-Nov-2018 13:27:39
+ */
+
+/*************************************************************************/
+/* This automatically generated example C main file shows how to call    */
+/* entry-point functions that MATLAB Coder generated. You must customize */
+/* this file for your application. Do not modify this file directly.     */
+/* Instead, make a copy of this file, modify it, and integrate it into   */
+/* your development environment.                                         */
+/*                                                                       */
+/* This file initializes entry-point function arguments to a default     */
+/* size and value before calling the entry-point functions. It does      */
+/* not store or use any values returned from the entry-point functions.  */
+/* If necessary, it does pre-allocate memory for returned values.        */
+/* You can use this file as a starting point for a main function that    */
+/* you can deploy in your application.                                   */
+/*                                                                       */
+/* After you copy the file, and before you deploy it, you must make the  */
+/* following changes:                                                    */
+/* * For variable-size function arguments, change the example sizes to   */
+/* the sizes that your application requires.                             */
+/* * Change the example values of function arguments to the values that  */
+/* your application requires.                                            */
+/* * If the entry-point functions return values, store these values or   */
+/* otherwise use them as required by your application.                   */
+/*                                                                       */
+/*************************************************************************/
+/* Include Files */
+#include <stdio.h>
+#include "rt_nonfinite.h"
+#include "located.h"
+#include "main.h"
+#include "located_terminate.h"
+#include "located_emxAPI.h"
+#include "located_initialize.h"
+#include "test_signal.h"
+#include "xstatus.h"
+#include "xuartlite_l.h"
+#include "sleep.h"
+#include "platform.h"
+#include "xil_printf.h"
+#include "xparameters.h"
+#include "string.h"
+#include "xtime_l.h"
+/* Function Declarations */
+#define LED 0x01   /* Assumes bit 0 of GPIO is connected to an LED  */
+
+/*
+ * The following constants map to the XPAR parameters created in the
+ * xparameters.h file. They are defined here such that a user can easily
+ * change all the needed parameters in one place.
+ */
+#define GPIO_EXAMPLE_DEVICE_ID  XPAR_GPIO_0_DEVICE_ID
+
+/*
+ * The following constant is used to wait after an LED is turned on to make
+ * sure that it is visible to the human eye.  This constant might need to be
+ * tuned for faster or slower processor speeds.
+ */
+#define LED_DELAY     10000000
+
+/*
+ * The following constant is used to determine which channel of the GPIO is
+ * used for the LED if there are 2 channels supported.
+ */
+#define LED_CHANNEL 1
+
+/**************************** Type Definitions *******************************/
+
+
+/***************** Macros (Inline Functions) Definitions *********************/
+
+#ifdef PRE_2_00A_APPLICATION
+
+/*
+ * The following macros are provided to allow an application to compile that
+ * uses an older version of the driver (pre 2.00a) which did not have a channel
+ * parameter. Note that the channel parameter is fixed as channel 1.
+ */
+#define XGpio_SetDataDirection(InstancePtr, DirectionMask) \
+        XGpio_SetDataDirection(InstancePtr, LED_CHANNEL, DirectionMask)
+
+#define XGpio_DiscreteRead(InstancePtr) \
+        XGpio_DiscreteRead(InstancePtr, LED_CHANNEL)
+
+#define XGpio_DiscreteWrite(InstancePtr, Mask) \
+        XGpio_DiscreteWrite(InstancePtr, LED_CHANNEL, Mask)
+
+#define XGpio_DiscreteSet(InstancePtr, Mask) \
+        XGpio_DiscreteSet(InstancePtr, LED_CHANNEL, Mask)
+
+#endif
+
+/************************** Function Prototypes ******************************/
+
+
+/************************** Variable Definitions *****************************/
+
+/*
+ * The following are declared globally so they are zeroed and so they are
+ * easily accessible from a debugger
+ */
+
+XGpio Gpio1; /* The Instance of the GPIO Driver */
+XGpio Gpio2; /* The Instance of the GPIO Driver */
+XGpio Gpio3; /* The Instance of the GPIO Driver */
+/*****************************************************************************/
+/**
+emxArray_real_T *show_angle;
+double angle=0;
+int trans_angle=0;
+int index_selectdata=0;
+static double dv1[49152];
+/* Function Definitions */
+//舵机控制初始化
+unsigned int Index;
+unsigned int L;	//servo's length
+
+static void argInit_6x8192_real_T(double result[49152]);
+//static double argInit_real_T(void);
+static void main_located(void);
+static u8 servo_com[16]="#1P";	// servo's first part of command
+//static u8 servo_com[]="#1P1500T1!";
+//static u8 servo_com[]="#1PSCK!";	//set the current position to 1500
+//static u8 servo_com[]="#1PCLE!";	//All parameters are restored to original settings
+
+void ControlServo (unsigned int pos);
+/*
+ * Arguments    : double result[49152]
+ * Return Type  : void
+ */
+//static double argInit_real_T(void)
+//{
+//  return 0.0;
+//}
+static void argInit_6x8192_real_T(double result[49152])
+{
+  int idx0;
+  int idx1;
+
+  /* Loop over the array to initialize each element. */
+  for (idx0 = 0; idx0 < 6; idx0++) {
+    for (idx1 = 0; idx1 < 8192; idx1++) {
+      /* Set the value of the array element.
+         Change this value to the value that the application requires. */
+      result[idx0 + 6 * idx1] = cos(2*3.14*(idx1-idx0+1))+ sin(2 * 3.14*(idx1 + idx0 + 1))+3.14159265;
+//    	 result[idx0 + 6 * idx1]=signal[inx0+in]
+	//	result[idx0 + 6 * idx1] = argInit_real_T();
+    }
+  }
+}
+
+/*
+ * Arguments    : void
+ * Return Type  : double
+ */
+
+
+/*
+ * Arguments    : void
+ * Return Type  : void
+ */
+static void main_located(void)
+{
+
+
+  emxInitArray_real_T(&show_angle, 1);
+
+  /* Initialize function 'located' input arguments. */
+  /* Initialize function input argument 'sig'. */
+  /* Call the entry-point 'located'. */
+//  argInit_6x8192_real_T(dv1);
+  if(index_selectdata==0)
+   located(dv1, show_angle);
+  else located(test_signal, show_angle);
+   angle = show_angle->data[0];
+  emxDestroyArray_real_T(show_angle);
+//  printf("hello world");
+ // system("pause");
+}
+
+/*
+ * Arguments    : int argc
+ *                const char * const argv[]
+ * Return Type  : int
+ */
+int main(int argc, const char * const argv[])
+{
+  (void)argc;
+  (void)argv;
+//  int i = 0;
+  /* Initialize the application.
+     You do not need to do this more than one time. */
+  located_initialize();
+  argInit_6x8192_real_T(dv1);
+  /* Invoke the entry-point functions.
+     You can call entry-point functions multiple times. */
+  printf("hello world\n\r");
+//  for (i=0;i<100;i++)
+//  {
+//	  main_located();
+//  }
+  printf("end....\n\r");
+    while(1)
+    {
+      main_located();
+     trans_angle=(int)((angle-45)*2000/270+500);
+  	 ControlServo (trans_angle);
+  	  printf("voice_angle:%0.0f\n\r",angle);
+  	 usleep(2000000);
+  	 index_selectdata=~index_selectdata;
+//  	  printf("tt=%d\n\r", i++);
+    }
+
+
+  system("pause");
+  /* Terminate the application.
+     You do not need to do this more than one time. */
+  located_terminate();
+  return 0;
+}
+
+void ControlServo (unsigned int pos)
+{
+	u8 c_pos[5];
+	itoa(pos,c_pos,10);	// transfer num(pos) to char(c_pos)
+	strcat(servo_com, c_pos);
+	strcat(servo_com, "T10!");
+
+	L=strlen(servo_com);
+	for (Index = 0; Index < L; Index++)
+	    	XUartLite_SendByte(XPAR_AXI_UARTLITE_0_BASEADDR, servo_com[Index]);
+
+	strcpy(servo_com, "#1P");
+}
+
+/*
+ * File trailer for main.c
+ *
+ * [EOF]
+ */

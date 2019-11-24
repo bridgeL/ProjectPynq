@@ -1,0 +1,458 @@
+#-----------------------------------------------------------
+# Vivado v2019.1.3 (64-bit)
+# SW Build 2644227 on Wed Sep  4 09:45:24 MDT 2019
+# IP Build 2633630 on Wed Sep  4 12:30:14 MDT 2019
+# Start of session at: Fri Nov 22 13:26:31 2019
+# Process ID: 117132
+# Current directory: D:/Xilinx/Vivado/project/final/final_002/final_002.runs/design_1_top_0_0_synth_1
+# Command line: vivado.exe -log design_1_top_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_top_0_0.tcl
+# Log file: D:/Xilinx/Vivado/project/final/final_002/final_002.runs/design_1_top_0_0_synth_1/design_1_top_0_0.vds
+# Journal file: D:/Xilinx/Vivado/project/final/final_002/final_002.runs/design_1_top_0_0_synth_1\vivado.jou
+#-----------------------------------------------------------
+source design_1_top_0_0.tcl -notrace
+create_project: Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 294.336 ; gain = 0.000
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository 'd:/Xilinx/Vivado/project/final/alltopip'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/Xilinx/Vivado/project/final/xilinx.com_user_top_1.0'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2019.1/data/ip'.
+Command: synth_design -top design_1_top_0_0 -part xc7z020clg400-1 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 117356 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:12 . Memory (MB): peak = 789.527 ; gain = 178.031
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'design_1_top_0_0' [d:/Xilinx/Vivado/project/final/final_002/final_002.srcs/sources_1/bd/design_1/ip/design_1_top_0_0/synth/design_1_top_0_0.v:58]
+INFO: [Synth 8-6157] synthesizing module 'top' [d:/Xilinx/Vivado/project/final/final_002/final_002.srcs/sources_1/bd/design_1/ipshared/accf/sources_1/new/top.v:23]
+INFO: [Synth 8-6157] synthesizing module 'ReadMic' [d:/Xilinx/Vivado/project/final/final_002/final_002.srcs/sources_1/bd/design_1/ipshared/accf/sources_1/new/ReadMic.v:23]
+INFO: [Synth 8-638] synthesizing module 'cic_compiler_0' [d:/Xilinx/Vivado/project/final/final_002/final_002.srcs/sources_1/bd/design_1/ip/design_1_top_0_0/sources_1/ip/cic_compiler_0/synth/cic_compiler_0.vhd:70]
+	Parameter C_COMPONENT_NAME bound to: cic_compiler_0 - type: string 
+	Parameter C_FILTER_TYPE bound to: 1 - type: integer 
+	Parameter C_NUM_STAGES bound to: 3 - type: integer 
+	Parameter C_DIFF_DELAY bound to: 1 - type: integer 
+	Parameter C_RATE bound to: 64 - type: integer 
+	Parameter C_INPUT_WIDTH bound to: 2 - type: integer 
+	Parameter C_OUTPUT_WIDTH bound to: 20 - type: integer 
+	Parameter C_USE_DSP bound to: 1 - type: integer 
+	Parameter C_HAS_ROUNDING bound to: 0 - type: integer 
+	Parameter C_NUM_CHANNELS bound to: 1 - type: integer 
+	Parameter C_RATE_TYPE bound to: 0 - type: integer 
+	Parameter C_MIN_RATE bound to: 64 - type: integer 
+	Parameter C_MAX_RATE bound to: 64 - type: integer 
+	Parameter C_SAMPLE_FREQ bound to: 1 - type: integer 
+	Parameter C_CLK_FREQ bound to: 10 - type: integer 
+	Parameter C_USE_STREAMING_INTERFACE bound to: 1 - type: integer 
+	Parameter C_FAMILY bound to: zynq - type: string 
+	Parameter C_XDEVICEFAMILY bound to: zynq - type: string 
+	Parameter C_C1 bound to: 20 - type: integer 
+	Parameter C_C2 bound to: 20 - type: integer 
+	Parameter C_C3 bound to: 20 - type: integer 
+	Parameter C_C4 bound to: 0 - type: integer 
+	Parameter C_C5 bound to: 0 - type: integer 
+	Parameter C_C6 bound to: 0 - type: integer 
+	Parameter C_I1 bound to: 20 - type: integer 
+	Parameter C_I2 bound to: 20 - type: integer 
+	Parameter C_I3 bound to: 20 - type: integer 
+	Parameter C_I4 bound to: 0 - type: integer 
+	Parameter C_I5 bound to: 0 - type: integer 
+	Parameter C_I6 bound to: 0 - type: integer 
+	Parameter C_S_AXIS_CONFIG_TDATA_WIDTH bound to: 1 - type: integer 
+	Parameter C_S_AXIS_DATA_TDATA_WIDTH bound to: 8 - type: integer 
+	Parameter C_M_AXIS_DATA_TDATA_WIDTH bound to: 24 - type: integer 
+	Parameter C_M_AXIS_DATA_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_HAS_DOUT_TREADY bound to: 0 - type: integer 
+	Parameter C_HAS_ACLKEN bound to: 0 - type: integer 
+	Parameter C_HAS_ARESETN bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'cic_compiler_v4_0_14' declared at 'd:/Xilinx/Vivado/project/final/final_002/final_002.srcs/sources_1/bd/design_1/ip/design_1_top_0_0/sources_1/ip/cic_compiler_0/hdl/cic_compiler_v4_0_vh_rfs.vhd:16134' bound to instance 'U0' of component 'cic_compiler_v4_0_14' [d:/Xilinx/Vivado/project/final/final_002/final_002.srcs/sources_1/bd/design_1/ip/design_1_top_0_0/sources_1/ip/cic_compiler_0/synth/cic_compiler_0.vhd:153]
+INFO: [Synth 8-256] done synthesizing module 'cic_compiler_0' (9#1) [d:/Xilinx/Vivado/project/final/final_002/final_002.srcs/sources_1/bd/design_1/ip/design_1_top_0_0/sources_1/ip/cic_compiler_0/synth/cic_compiler_0.vhd:70]
+INFO: [Synth 8-6155] done synthesizing module 'ReadMic' (10#1) [d:/Xilinx/Vivado/project/final/final_002/final_002.srcs/sources_1/bd/design_1/ipshared/accf/sources_1/new/ReadMic.v:23]
+INFO: [Synth 8-6157] synthesizing module 'clk_wiz_0' [d:/Xilinx/Vivado/project/final/final_002/final_002.srcs/sources_1/bd/design_1/ip/design_1_top_0_0/sources_1/ip/clk_wiz_0/clk_wiz_0.v:70]
+INFO: [Synth 8-6157] synthesizing module 'clk_wiz_0_clk_wiz' [d:/Xilinx/Vivado/project/final/final_002/final_002.srcs/sources_1/bd/design_1/ip/design_1_top_0_0/sources_1/ip/clk_wiz_0/clk_wiz_0_clk_wiz.v:68]
+INFO: [Synth 8-6157] synthesizing module 'IBUF' [D:/Xilinx/Vivado/2019.1/scripts/rt/data/unisim_comp.v:32856]
+	Parameter CAPACITANCE bound to: DONT_CARE - type: string 
+	Parameter IBUF_DELAY_VALUE bound to: 0 - type: string 
+	Parameter IBUF_LOW_PWR bound to: TRUE - type: string 
+	Parameter IFD_DELAY_VALUE bound to: AUTO - type: string 
+	Parameter IOSTANDARD bound to: DEFAULT - type: string 
+INFO: [Synth 8-6155] done synthesizing module 'IBUF' (11#1) [D:/Xilinx/Vivado/2019.1/scripts/rt/data/unisim_comp.v:32856]
+INFO: [Synth 8-6157] synthesizing module 'PLLE2_ADV' [D:/Xilinx/Vivado/2019.1/scripts/rt/data/unisim_comp.v:61199]
+	Parameter BANDWIDTH bound to: OPTIMIZED - type: string 
+	Parameter CLKFBOUT_MULT bound to: 48 - type: integer 
+	Parameter CLKFBOUT_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKIN1_PERIOD bound to: 8.000000 - type: float 
+	Parameter CLKIN2_PERIOD bound to: 0.000000 - type: float 
+	Parameter CLKOUT0_DIVIDE bound to: 50 - type: integer 
+	Parameter CLKOUT0_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT0_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT1_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT1_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT1_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT2_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT2_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT2_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT3_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT3_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT3_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT4_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT4_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT4_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT5_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT5_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT5_PHASE bound to: 0.000000 - type: float 
+	Parameter COMPENSATION bound to: ZHOLD - type: string 
+	Parameter DIVCLK_DIVIDE bound to: 5 - type: integer 
+	Parameter IS_CLKINSEL_INVERTED bound to: 1'b0 
+	Parameter IS_PWRDWN_INVERTED bound to: 1'b0 
+	Parameter IS_RST_INVERTED bound to: 1'b0 
+	Parameter REF_JITTER1 bound to: 0.010000 - type: float 
+	Parameter REF_JITTER2 bound to: 0.010000 - type: float 
+	Parameter STARTUP_WAIT bound to: FALSE - type: string 
+INFO: [Synth 8-6155] done synthesizing module 'PLLE2_ADV' (12#1) [D:/Xilinx/Vivado/2019.1/scripts/rt/data/unisim_comp.v:61199]
+INFO: [Synth 8-6157] synthesizing module 'BUFG' [D:/Xilinx/Vivado/2019.1/scripts/rt/data/unisim_comp.v:1075]
+INFO: [Synth 8-6155] done synthesizing module 'BUFG' (13#1) [D:/Xilinx/Vivado/2019.1/scripts/rt/data/unisim_comp.v:1075]
+INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_0_clk_wiz' (14#1) [d:/Xilinx/Vivado/project/final/final_002/final_002.srcs/sources_1/bd/design_1/ip/design_1_top_0_0/sources_1/ip/clk_wiz_0/clk_wiz_0_clk_wiz.v:68]
+INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_0' (15#1) [d:/Xilinx/Vivado/project/final/final_002/final_002.srcs/sources_1/bd/design_1/ip/design_1_top_0_0/sources_1/ip/clk_wiz_0/clk_wiz_0.v:70]
+INFO: [Synth 8-6155] done synthesizing module 'top' (16#1) [d:/Xilinx/Vivado/project/final/final_002/final_002.srcs/sources_1/bd/design_1/ipshared/accf/sources_1/new/top.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_top_0_0' (17#1) [d:/Xilinx/Vivado/project/final/final_002/final_002.srcs/sources_1/bd/design_1/ip/design_1_top_0_0/synth/design_1_top_0_0.v:58]
+WARNING: [Synth 8-3331] design delay__parameterized1 has unconnected port WE
+WARNING: [Synth 8-3331] design delay__parameterized1 has unconnected port CE
+WARNING: [Synth 8-3331] design delay__parameterized1 has unconnected port SCLR
+WARNING: [Synth 8-3331] design delay__parameterized1 has unconnected port CLK
+WARNING: [Synth 8-3331] design delay__parameterized7 has unconnected port WE
+WARNING: [Synth 8-3331] design delay__parameterized7 has unconnected port CE
+WARNING: [Synth 8-3331] design delay__parameterized7 has unconnected port SCLR
+WARNING: [Synth 8-3331] design delay__parameterized7 has unconnected port CLK
+WARNING: [Synth 8-3331] design delay__parameterized5 has unconnected port WE
+WARNING: [Synth 8-3331] design delay__parameterized5 has unconnected port CE
+WARNING: [Synth 8-3331] design delay__parameterized5 has unconnected port SCLR
+WARNING: [Synth 8-3331] design delay__parameterized5 has unconnected port CLK
+WARNING: [Synth 8-3331] design emb_calc has unconnected port PRE_ADDSUB
+WARNING: [Synth 8-3331] design emb_calc has unconnected port PRE_ADD_BYPASS
+WARNING: [Synth 8-3331] design emb_calc has unconnected port CED
+WARNING: [Synth 8-3331] design delay_bit__parameterized0 has unconnected port SCLR
+WARNING: [Synth 8-3331] design delay_bit has unconnected port WE
+WARNING: [Synth 8-3331] design delay_bit has unconnected port CE
+WARNING: [Synth 8-3331] design delay_bit has unconnected port SCLR
+WARNING: [Synth 8-3331] design delay_bit has unconnected port CLK
+WARNING: [Synth 8-3331] design delay_bit__parameterized1 has unconnected port SCLR
+WARNING: [Synth 8-3331] design delay__parameterized9 has unconnected port SCLR
+WARNING: [Synth 8-3331] design delay_bit__parameterized3 has unconnected port WE
+WARNING: [Synth 8-3331] design delay_bit__parameterized3 has unconnected port CE
+WARNING: [Synth 8-3331] design delay_bit__parameterized3 has unconnected port SCLR
+WARNING: [Synth 8-3331] design delay_bit__parameterized3 has unconnected port CLK
+WARNING: [Synth 8-3331] design decimate has unconnected port RATE[6]
+WARNING: [Synth 8-3331] design decimate has unconnected port RATE[5]
+WARNING: [Synth 8-3331] design decimate has unconnected port RATE[4]
+WARNING: [Synth 8-3331] design decimate has unconnected port RATE[3]
+WARNING: [Synth 8-3331] design decimate has unconnected port RATE[2]
+WARNING: [Synth 8-3331] design decimate has unconnected port RATE[1]
+WARNING: [Synth 8-3331] design decimate has unconnected port RATE[0]
+WARNING: [Synth 8-3331] design decimate has unconnected port RATE_WE
+WARNING: [Synth 8-3331] design decimate has unconnected port halt
+WARNING: [Synth 8-3331] design decimate has unconnected port aresetn
+WARNING: [Synth 8-3331] design cic_compiler_v4_0_14_viv has unconnected port m_axis_data_tuser[0]
+WARNING: [Synth 8-3331] design cic_compiler_v4_0_14_viv has unconnected port m_axis_data_tlast
+WARNING: [Synth 8-3331] design cic_compiler_v4_0_14_viv has unconnected port aclken
+WARNING: [Synth 8-3331] design cic_compiler_v4_0_14_viv has unconnected port aresetn
+WARNING: [Synth 8-3331] design cic_compiler_v4_0_14_viv has unconnected port s_axis_config_tdata[0]
+WARNING: [Synth 8-3331] design cic_compiler_v4_0_14_viv has unconnected port s_axis_config_tvalid
+WARNING: [Synth 8-3331] design cic_compiler_v4_0_14_viv has unconnected port s_axis_data_tdata[7]
+WARNING: [Synth 8-3331] design cic_compiler_v4_0_14_viv has unconnected port s_axis_data_tdata[6]
+WARNING: [Synth 8-3331] design cic_compiler_v4_0_14_viv has unconnected port s_axis_data_tdata[5]
+WARNING: [Synth 8-3331] design cic_compiler_v4_0_14_viv has unconnected port s_axis_data_tdata[4]
+WARNING: [Synth 8-3331] design cic_compiler_v4_0_14_viv has unconnected port s_axis_data_tdata[3]
+WARNING: [Synth 8-3331] design cic_compiler_v4_0_14_viv has unconnected port s_axis_data_tdata[2]
+WARNING: [Synth 8-3331] design cic_compiler_v4_0_14_viv has unconnected port s_axis_data_tlast
+WARNING: [Synth 8-3331] design cic_compiler_v4_0_14_viv has unconnected port m_axis_data_tready
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:22 . Memory (MB): peak = 876.242 ; gain = 264.746
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:10 ; elapsed = 00:00:22 . Memory (MB): peak = 876.242 ; gain = 264.746
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:22 . Memory (MB): peak = 876.242 ; gain = 264.746
+---------------------------------------------------------------------------------
+INFO: [Netlist 29-17] Analyzing 13 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [d:/Xilinx/Vivado/project/final/final_002/final_002.srcs/sources_1/bd/design_1/ip/design_1_top_0_0/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'inst/instance_name/inst'
+Finished Parsing XDC File [d:/Xilinx/Vivado/project/final/final_002/final_002.srcs/sources_1/bd/design_1/ip/design_1_top_0_0/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'inst/instance_name/inst'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [d:/Xilinx/Vivado/project/final/final_002/final_002.srcs/sources_1/bd/design_1/ip/design_1_top_0_0/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/design_1_top_0_0_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/design_1_top_0_0_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Timing 38-2] Deriving generated clocks
+Parsing XDC File [D:/Xilinx/Vivado/project/final/final_002/final_002.runs/design_1_top_0_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [D:/Xilinx/Vivado/project/final/final_002/final_002.runs/design_1_top_0_0_synth_1/dont_touch.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/Xilinx/Vivado/project/final/final_002/final_002.runs/design_1_top_0_0_synth_1/dont_touch.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/design_1_top_0_0_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/design_1_top_0_0_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 976.582 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.211 . Memory (MB): peak = 977.570 ; gain = 0.988
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:17 ; elapsed = 00:00:36 . Memory (MB): peak = 977.570 ; gain = 366.074
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:17 ; elapsed = 00:00:36 . Memory (MB): peak = 977.570 ; gain = 366.074
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for inst/instance_name/inst. (constraint file  D:/Xilinx/Vivado/project/final/final_002/final_002.runs/design_1_top_0_0_synth_1/dont_touch.xdc, line 14).
+Applied set_property DONT_TOUCH = true for inst/ReadMic/your_instance_name1. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/ReadMic/your_instance_name2. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/ReadMic/your_instance_name3. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/ReadMic/your_instance_name4. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/ReadMic/your_instance_name5. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/ReadMic/your_instance_name6. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/instance_name. (constraint file  auto generated constraint, line ).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:37 . Memory (MB): peak = 977.570 ; gain = 366.074
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:17 ; elapsed = 00:00:37 . Memory (MB): peak = 977.570 ; gain = 366.074
+---------------------------------------------------------------------------------
+INFO: [Synth 8-223] decloning instance 'cic_compiler_0:/U0/i_synth/decimator.decimation_filter/comb/gen_stages[0].gen_folded.int_comb_stage/gen_split_accum[0].gen_mem_we' (delay_bit__parameterized0) to 'cic_compiler_0:/U0/i_synth/decimator.decimation_filter/comb/gen_stages[0].gen_folded.int_comb_stage/gen_split_accum[0].gen_comb_mem_src.gen_en_dly'
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+WARNING: [Synth 8-3331] design cic_compiler_v4_0_14_viv has unconnected port m_axis_data_tuser[0]
+WARNING: [Synth 8-3331] design cic_compiler_v4_0_14_viv has unconnected port m_axis_data_tlast
+WARNING: [Synth 8-3331] design cic_compiler_v4_0_14_viv has unconnected port aclken
+WARNING: [Synth 8-3331] design cic_compiler_v4_0_14_viv has unconnected port aresetn
+WARNING: [Synth 8-3331] design cic_compiler_v4_0_14_viv has unconnected port s_axis_config_tdata[0]
+WARNING: [Synth 8-3331] design cic_compiler_v4_0_14_viv has unconnected port s_axis_config_tvalid
+WARNING: [Synth 8-3331] design cic_compiler_v4_0_14_viv has unconnected port s_axis_data_tdata[7]
+WARNING: [Synth 8-3331] design cic_compiler_v4_0_14_viv has unconnected port s_axis_data_tdata[6]
+WARNING: [Synth 8-3331] design cic_compiler_v4_0_14_viv has unconnected port s_axis_data_tdata[5]
+WARNING: [Synth 8-3331] design cic_compiler_v4_0_14_viv has unconnected port s_axis_data_tdata[4]
+WARNING: [Synth 8-3331] design cic_compiler_v4_0_14_viv has unconnected port s_axis_data_tdata[3]
+WARNING: [Synth 8-3331] design cic_compiler_v4_0_14_viv has unconnected port s_axis_data_tdata[2]
+WARNING: [Synth 8-3331] design cic_compiler_v4_0_14_viv has unconnected port s_axis_data_tlast
+WARNING: [Synth 8-3331] design cic_compiler_v4_0_14_viv has unconnected port m_axis_data_tready
+INFO: [Synth 8-3886] merging instance 'cic_compiler_0:/U0/i_synth/decimator.decimation_filter/int/gen_stages[0].gen_folded.int_comb_stage/gen_split_accum[0].gen_sum_struct.opcode_reg[0]' (FDR) to 'cic_compiler_0:/U0/i_synth/decimator.decimation_filter/int/gen_stages[0].gen_folded.int_comb_stage/gen_split_accum[0].gen_sum_struct.opcode_reg[5]'
+INFO: [Synth 8-3886] merging instance 'cic_compiler_0:/U0/i_synth/decimator.decimation_filter/int/gen_stages[0].gen_folded.int_comb_stage/gen_split_accum[0].gen_sum_struct.opcode_reg[1]' (FDS) to 'cic_compiler_0:/U0/i_synth/decimator.decimation_filter/comb/gen_stages[0].gen_folded.int_comb_stage/gen_split_accum[0].gen_sum_struct.opcode_reg[1]'
+INFO: [Synth 8-3886] merging instance 'cic_compiler_0:/U0/i_synth/decimator.decimation_filter/int/gen_stages[0].gen_folded.int_comb_stage/gen_split_accum[0].gen_sum_struct.opcode_reg[2]' (FDR) to 'cic_compiler_0:/U0/i_synth/decimator.decimation_filter/comb/gen_stages[0].gen_folded.int_comb_stage/gen_split_accum[0].gen_sum_struct.opcode_reg[6]'
+INFO: [Synth 8-3886] merging instance 'cic_compiler_0:/U0/i_synth/decimator.decimation_filter/int/gen_stages[0].gen_folded.int_comb_stage/gen_split_accum[0].gen_sum_struct.opcode_reg[3]' (FDR) to 'cic_compiler_0:/U0/i_synth/decimator.decimation_filter/comb/gen_stages[0].gen_folded.int_comb_stage/gen_split_accum[0].gen_sum_struct.opcode_reg[6]'
+INFO: [Synth 8-3886] merging instance 'cic_compiler_0:/U0/i_synth/decimator.decimation_filter/int/gen_stages[0].gen_folded.int_comb_stage/gen_split_accum[0].gen_sum_struct.opcode_reg[6]' (FDR) to 'cic_compiler_0:/U0/i_synth/decimator.decimation_filter/comb/gen_stages[0].gen_folded.int_comb_stage/gen_split_accum[0].gen_sum_struct.opcode_reg[6]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (cic_compiler_0:/U0/i_synth/\decimator.decimation_filter/int/gen_stages[0].gen_folded.int_comb_stage/gen_split_accum[0].gen_sum_struct.addsub_reg )
+INFO: [Synth 8-3886] merging instance 'cic_compiler_0:/U0/i_synth/decimator.decimation_filter/comb/gen_stages[0].gen_folded.int_comb_stage/gen_split_accum[0].gen_comb_mem_src.gen_nd_dly/gen_rtl.gen_dly.gen_pipe.delay_bus_reg[0]' (FDE) to 'cic_compiler_0:/U0/i_synth/decimator.decimation_filter/comb/gen_stages[0].gen_folded.int_comb_stage/gen_nd_out_dly/gen_rtl.gen_dly.gen_pipe.delay_bus_reg[0]'
+INFO: [Synth 8-3886] merging instance 'cic_compiler_0:/U0/i_synth/decimator.decimation_filter/comb/gen_stages[0].gen_folded.int_comb_stage/gen_split_accum[0].gen_comb_mem_src.gen_nd_dly/gen_rtl.gen_dly.gen_pipe.delay_bus_reg[1]' (FDE) to 'cic_compiler_0:/U0/i_synth/decimator.decimation_filter/comb/gen_stages[0].gen_folded.int_comb_stage/gen_nd_out_dly/gen_rtl.gen_dly.gen_pipe.delay_bus_reg[1]'
+INFO: [Synth 8-3886] merging instance 'cic_compiler_0:/U0/i_synth/decimator.decimation_filter/comb/gen_stages[0].gen_folded.int_comb_stage/gen_split_accum[0].gen_sum_struct.opcode_reg[0]' (FDR) to 'cic_compiler_0:/U0/i_synth/decimator.decimation_filter/comb/gen_stages[0].gen_folded.int_comb_stage/gen_split_accum[0].gen_sum_struct.opcode_reg[5]'
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (cic_compiler_0:/U0/i_synth/\decimator.decimation_filter/comb/gen_stages[0].gen_folded.int_comb_stage/gen_split_accum[0].gen_sum_struct.opcode_reg[1] )
+INFO: [Synth 8-3886] merging instance 'cic_compiler_0:/U0/i_synth/decimator.decimation_filter/comb/gen_stages[0].gen_folded.int_comb_stage/gen_split_accum[0].gen_sum_struct.opcode_reg[2]' (FDR) to 'cic_compiler_0:/U0/i_synth/decimator.decimation_filter/comb/gen_stages[0].gen_folded.int_comb_stage/gen_split_accum[0].gen_sum_struct.opcode_reg[6]'
+INFO: [Synth 8-3886] merging instance 'cic_compiler_0:/U0/i_synth/decimator.decimation_filter/comb/gen_stages[0].gen_folded.int_comb_stage/gen_split_accum[0].gen_sum_struct.opcode_reg[3]' (FDR) to 'cic_compiler_0:/U0/i_synth/decimator.decimation_filter/comb/gen_stages[0].gen_folded.int_comb_stage/gen_split_accum[0].gen_sum_struct.opcode_reg[6]'
+INFO: [Synth 8-3886] merging instance 'cic_compiler_0:/U0/i_synth/decimator.decimation_filter/comb/gen_stages[0].gen_folded.int_comb_stage/gen_split_accum[0].gen_sum_struct.opcode_reg[5]' (FDR) to 'cic_compiler_0:/U0/i_synth/decimator.decimation_filter/comb/gen_stages[0].gen_folded.int_comb_stage/gen_split_accum[0].gen_sum_struct.addsub_reg'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (cic_compiler_0:/U0/i_synth/\decimator.decimation_filter/comb/gen_stages[0].gen_folded.int_comb_stage/gen_split_accum[0].gen_sum_struct.opcode_reg[6] )
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:40 . Memory (MB): peak = 977.570 ; gain = 366.074
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:32 ; elapsed = 00:00:53 . Memory (MB): peak = 995.520 ; gain = 384.023
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:33 ; elapsed = 00:00:54 . Memory (MB): peak = 1017.277 ; gain = 405.781
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:34 ; elapsed = 00:00:55 . Memory (MB): peak = 1018.684 ; gain = 407.188
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:36 ; elapsed = 00:00:58 . Memory (MB): peak = 1024.473 ; gain = 412.977
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:36 ; elapsed = 00:00:58 . Memory (MB): peak = 1024.473 ; gain = 412.977
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:37 ; elapsed = 00:00:58 . Memory (MB): peak = 1024.473 ; gain = 412.977
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:37 ; elapsed = 00:00:58 . Memory (MB): peak = 1024.473 ; gain = 412.977
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:37 ; elapsed = 00:00:58 . Memory (MB): peak = 1024.473 ; gain = 412.977
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:37 ; elapsed = 00:00:58 . Memory (MB): peak = 1024.473 ; gain = 412.977
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+----------+------+
+|      |Cell      |Count |
++------+----------+------+
+|1     |BUFG      |     2|
+|2     |DSP48E1   |    12|
+|3     |LUT1      |     1|
+|4     |LUT2      |    63|
+|5     |LUT3      |   162|
+|6     |LUT4      |    66|
+|7     |LUT5      |    36|
+|8     |LUT6      |    78|
+|9     |PLLE2_ADV |     1|
+|10    |SRL16E    |   150|
+|11    |FDRE      |  1018|
+|12    |FDSE      |     6|
+|13    |IBUF      |     1|
++------+----------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:37 ; elapsed = 00:00:58 . Memory (MB): peak = 1024.473 ; gain = 412.977
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 14 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:24 ; elapsed = 00:00:49 . Memory (MB): peak = 1024.473 ; gain = 311.648
+Synthesis Optimization Complete : Time (s): cpu = 00:00:37 ; elapsed = 00:00:59 . Memory (MB): peak = 1024.473 ; gain = 412.977
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 13 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1024.473 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+53 Infos, 65 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:45 ; elapsed = 00:01:16 . Memory (MB): peak = 1024.473 ; gain = 705.859
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1024.473 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'D:/Xilinx/Vivado/project/final/final_002/final_002.runs/design_1_top_0_0_synth_1/design_1_top_0_0.dcp' has been generated.
+WARNING: [Common 17-576] 'use_project_ipc' is deprecated. This option is deprecated and no longer used.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP design_1_top_0_0, cache-ID = f5853134b990426e
+INFO: [Coretcl 2-1174] Renamed 124 cell refs.
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1024.473 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'D:/Xilinx/Vivado/project/final/final_002/final_002.runs/design_1_top_0_0_synth_1/design_1_top_0_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file design_1_top_0_0_utilization_synth.rpt -pb design_1_top_0_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Fri Nov 22 13:28:22 2019...

@@ -1,0 +1,21 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Mon Sep  9 16:50:05 2019
+# Process ID: 16964
+# Current directory: C:/Users/mi/Desktop/NEW_ITEM/XILINX FPGA 大赛/声源定位/Vivado工程/final/final_002
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent18572 C:\Users\mi\Desktop\NEW_ITEM\XILINX FPGA 大赛\声源定位\Vivado工程\final\final_002\final_002.xpr
+# Log file: C:/Users/mi/Desktop/NEW_ITEM/XILINX FPGA 大赛/声源定位/Vivado工程/final/final_002/vivado.log
+# Journal file: C:/Users/mi/Desktop/NEW_ITEM/XILINX FPGA 大赛/声源定位/Vivado工程/final/final_002\vivado.jou
+#-----------------------------------------------------------sstart_gui
+open_project -read_only {C:/Users/mi/Desktop/NEW_ITEM/XILINX FPGA 大赛/声源定位/Vivado工程/final/final_002/final_002.xpr}
+update_compile_order -fileset sources_1
+launch_sdk -workspace {C:/Users/mi/Desktop/NEW_ITEM/XILINX FPGA 大赛/声源定位/Vivado工程/final/final_002/final_002.sdk} -hwspec {C:/Users/mi/Desktop/NEW_ITEM/XILINX FPGA 大赛/声源定位/Vivado工程/final/final_002/final_002.sdk/design_1_wrapper.hdf}
+close_project
+open_project {C:/Users/mi/Desktop/NEW_ITEM/XILINX FPGA 大赛/声源定位/Vivado工程/final/BeiFen1/BeiFen1.xpr}
+update_compile_order -fileset sources_1
+launch_sdk -workspace {C:/Users/mi/Desktop/NEW_ITEM/XILINX FPGA 大赛/声源定位/Vivado工程/final/BeiFen1/BeiFen1.sdk} -hwspec {C:/Users/mi/Desktop/NEW_ITEM/XILINX FPGA 大赛/声源定位/Vivado工程/final/BeiFen1/BeiFen1.sdk/design_1_wrapper.hdf}
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+wait_on_run synth_1
